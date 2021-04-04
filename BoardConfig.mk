@@ -136,3 +136,16 @@ TARGET_USES_MKE2FS := true
 TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+
+
+# Dynamic Partition handling flags
+
+IGNORE_UPDATE_LOGICAL_PARTITION_ERROR := true # Makes twrp ignore "unable to update logical partition" error
+ALLOW_LOGICAL_PARTITION_WIPE := true # lets the dynamic partitions be wipable/resizable in twrp > wipe
+
+# these dynamic partitions will get mounted as rw
+BOARD_RW_DYNAMIC_PARTITIONS_LIST := \
+    system \
+    vendor \
+    product \
+    odm
